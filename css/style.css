@@ -1,6 +1,7 @@
 @import url(zero.css);
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("http://fonts.cdnfonts.com/css/post-no-bills-jaffna");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
     background: #0f0f0f;
@@ -97,15 +98,20 @@ body {
 }
 
 .main {
-    background: url(/img/background1.png) no-repeat;
-    max-width: 1920px;
-    height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.9s;
-}
-.container {
+    flex-direction: column;
+    max-width: 1920px;
+    height: 100%;
+    background: linear-gradient(
+            0deg,
+            rgba(15, 15, 15, 0.5),
+            rgba(15, 15, 15, 0.5)
+        ),
+        url("../img/background1.png");
+    background-position: center;
+    background-size: cover;
 }
 .main__body {
     display: flex;
@@ -154,4 +160,187 @@ body {
     line-height: 150%;
     text-transform: uppercase;
     max-width: 720px;
+}
+.collection .container {
+    max-width: 1920px;
+    padding: 0;
+}
+.collection__body {
+    display: flex;
+    flex-wrap: wrap;
+}
+.collection__cathalog {
+    flex: 1 1 60%;
+    font-family: Playfair Display;
+}
+.collection__cathalog-header {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    margin: 90px auto 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.collection__cathalog .collection__container-header::before {
+    content: "";
+    height: 1px;
+    width: 120px;
+    background: #fff;
+    position: absolute;
+    bottom: -80%;
+}
+.collection__cathalog-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5rem;
+    gap: 1rem;
+}
+
+.collection__container {
+    flex: 1 1 40%;
+    background: linear-gradient(
+            0deg,
+            rgba(15, 15, 15, 0.5),
+            rgba(15, 15, 15, 0.5)
+        ),
+        url("../img/bg-collection.png"), #000000;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+.collection__container-header {
+    font-family: Playfair Display;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 7rem;
+}
+.collection__container-button {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 12px 28px;
+    background: transparent;
+    box-sizing: border-box;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 50px 0 80px;
+    transition: all 0.3s;
+}
+.collection__container-button:hover {
+    background: #fff;
+    color: #000000;
+}
+.collection__container-header::before {
+    content: "";
+    height: 1px;
+    width: 120px;
+    background: #fff;
+    position: absolute;
+    bottom: -40%;
+}
+
+.collection__body-sec {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+    height: 100%;
+}
+.collection__text {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    min-width: 375px;
+}
+.collection__title {
+    font-family: Playfair Display;
+    font-size: 36px;
+    line-height: 48px;
+    text-transform: uppercase;
+    margin-top: 7rem;
+}
+.collection__desc {
+    font-size: 14px;
+    line-height: 150%;
+    max-width: 470px;
+    text-align: center;
+    margin: 4rem 0 3rem;
+}
+.collection__btn {
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: transparent;
+    color: #fff;
+    margin-bottom: 5rem;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    padding: 12px 28px;
+    transition: all 0.5s;
+}
+.collection__btn:hover {
+    background: #fff;
+    color: #000000;
+}
+.collection__bg {
+    flex: 1 1 40%;
+    background: linear-gradient(
+            0deg,
+            rgba(15, 15, 15, 0.5),
+            rgba(15, 15, 15, 0.5)
+        ),
+        url("../img/bg-colection2.png"), #000000;
+}
+
+.new-goods__header {
+    font-family: Playfair Display;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.new-goods__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.new-goods__item {
+    cursor: pointer;
+}
+.new-goods__item:hover {
+    transform: translateZ(100px);
+}
+.new-goods__item-img {
+    background: #191b1c;
+    padding: 50px 20px;
+}
+.new-goods__item-name {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 25px 0 10px;
+}
+.new-goods__item-price {
+    font-size: 16px;
+    line-height: 21px;
 }
